@@ -7,58 +7,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
-<body>
-    <div id="logo">
-        <img src="images.png">
-    </div>
-    <div id="menu">
-        <div id="menu-bar">
-            <ul>
-                <li class="active">
-                    <a>Button</a>
-                </li><li class="inactive">
-                    <a>Button</a>
-                </li><li class="inactive">
-                    <a>Button</a>
-                </li><li class="inactive">
-                    <a>Button</a>
-                </li>
-                
-            </ul>
+<body onload="loaded()">
+    <div id="loadingscreen">
+        <div id="loader-logo">
+            <img src="images.png">
         </div>
-        <div id="login-bar">
-                <ul>
-                    <li>
-                        Login
-                    </li><li>
-                        Register
-                    </li>
-                </ul>
+        <div id="spinner-wrapper">
+            <div id="spinner1">
             </div>
-    </div>
-    <div id="content-menu">
-        <a onclick="slidecontroller(0)">content 1</a> </br>
-        <a onclick="slidecontroller(1)">content 2</a></br>
-        <a onclick="slidecontroller(2)">content 3</a>
-    </div>
-    <div id="main-content-wrapper">
-        <div id="pfeilb" onclick="slidecontroller(slideindex-1)"><img src="pfeilb.png"></div>
-        <div id="main-content">
-            <div class="content" id="c0">
-                content 1 </br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+            <div id="spinner2">
             </div>
-            <div class="content-hidden" id="c1">
-                content 2 </br>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath
-            </div>
-            <div class="content-hidden" id="c2">
-                content 3 </br>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
-            </div>
-        </div>
-        <div id="pfeiln" onclick="slidecontroller(slideindex+1)"><img src="pfeiln.png"></div>
+        </div>    
+    </div><script>
+        function loaded(){
+            setTimeout(function(){
+                document.getElementById("loadingscreen").style.animation = "fadeout 1s ease"
+                setTimeout(function(){document.getElementById("loadingscreen").style.display = "none";},1000)
+                document.getElementById("website").style.display = "block";
+            },500)
+        }
+    </script>
+
+
+
+    <div id="website">
+            <div id="logo">
+                    <img src="images.png">
+                </div>
+                <div id="menu">
+                    <div id="menu-bar">
+                        <ul>
+                            <li class="active">
+                                <a>Button</a>
+                            </li><li class="inactive">
+                                <a>Button</a>
+                            </li><li class="inactive">
+                                <a>Button</a>
+                            </li><li class="inactive">
+                                <a>Button</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div id="login-bar">
+                            <ul>
+                                <li>
+                                    Login
+                                </li><li>
+                                    Register
+                                </li>
+                            </ul>
+                        </div>
+                </div>
+                <div id="content-menu">
+                    <a onclick="slidecontroller(0)">content 1</a> </br>
+                    <a onclick="slidecontroller(1)">content 2</a></br>
+                    <a onclick="slidecontroller(2)">content 3</a>
+                </div>
+                <div id="main-content-wrapper">
+                    <div id="pfeilb" onclick="slidecontroller(slideindex-1)"><img src="pfeilb.png"></div>
+                    <div id="main-content">
+                        <div class="content" id="c0">
+                            content 1 </br>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+                        </div>
+                        <div class="content-hidden" id="c1">
+                            content 2 </br>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath
+                        </div>
+                        <div class="content-hidden" id="c2">
+                            content 3 </br>Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles. Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental. A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es.Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores. At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.
+                        </div>
+                    </div>
+                    <div id="pfeiln" onclick="slidecontroller(slideindex+1)"><img src="pfeiln.png"></div>
+                </div>
+                <div id="footer">
+                    <a>&copy;PixelSchmiede</a>
+                </div>
     </div>
-    <div id="footer">
-        <a>&copy;PixelJuden</a>
-    </div>
+    
     <script src="p5.min.js"></script>
     <script src="scrollcontroler.js"></script>
 </body>

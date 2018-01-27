@@ -3,6 +3,12 @@ body{
     background: rgb(230, 230, 230);
 }
 
+.btn{
+    color:white;
+    text-decoration: none;
+    padding:2vw;
+}
+
 #spinner-wrapper{
     width:7vh;
     height:7vh;
@@ -123,6 +129,7 @@ body{
 }
 
 #login-bar ul li{
+    display: table;
     padding:2vw;
     float:left;
     color: white;
@@ -147,10 +154,11 @@ body{
 }
 
 #menu-bar ul li{
-    padding:2vw;
     float:left;
-    color: white;
     font-size: 1.5vw;
+    padding-top:2vw;
+    padding-bottom:2vw;
+    display: table;
 }
 
 .inactive{
